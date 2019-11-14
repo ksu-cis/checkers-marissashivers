@@ -2,3 +2,35 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your Javascript code.
+var checkers = document.getElementsByTagName("circle");
+var selectedChecker;
+
+function onClick(event) {
+    if (selectedChecker) {
+        selectedChecker.setAttribute("stroke", "gray");
+    }
+    selectedChecker = event.target;
+    event.target.setAttribute("stroke", "green");
+    document.getElementById("cx").value = selectedChecker.getAttribute
+
+
+}
+
+function onClickSquare(event) {
+    if (selectedChecker) {
+        // attempt move
+        var form = document.createElement('form');
+        form.method = "post";
+        var x = = document.createElement
+    }
+}
+
+var checkers = document.getElementsByTagName("circle");
+for (var i = 0; i < checkers.length; i++) {
+    checkers[i].addEventListener('click', onClick);
+}
+
+var squares = document.getElementsByTagName("rect");
+for (var j = 0; j < squares.length; j++) {
+    squares[j].addEventListener('click', onClickSquare);
+}
